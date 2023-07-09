@@ -3,8 +3,9 @@ import styled from 'styled-components';
 import { BookText } from '../atoms/BookText';
 
 type Props = {
-    name: String,
+    title: String,
     author: String,
+    description: String,
 }
 
 const Div = styled.div`
@@ -15,9 +16,10 @@ const Div = styled.div`
     border-radius: 10px;
 
     margin-right: 29px;
+    margin-top: 31px;
 
     @media screen and (max-width: 767px) {
-        margin: 0 36px 30px 0;
+        margin: 36px 36px 0 0;
         width: auto;
     }
 `
@@ -25,8 +27,9 @@ const Div = styled.div`
 const BookBox = (props: Props) => {
   return (
     <Div>
-        <BookText>Name: {props.name}</BookText>
+        <BookText>Title: {props.title}</BookText>
         <BookText>Author: {props.author}</BookText>
+        {props.description && <BookText>Description: {props.description}</BookText>}
     </Div>
   )
 }

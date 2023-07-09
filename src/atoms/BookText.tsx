@@ -8,6 +8,6 @@ export const BookText = styled.span`
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-
+    padding-top: 10px;
     display: block;
 `

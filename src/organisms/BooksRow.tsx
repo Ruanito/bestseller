@@ -2,8 +2,9 @@ import styled from 'styled-components';
 import BookBox from '../molecules/BookBox';
 
 const Div = styled.div`
-    margin: 36px 0 0 36px;
+    margin: 0 0 0 27px;
     display: flex;
+    flex-flow: wrap;
 
     @media screen and (max-width: 767px) {
         display: block;
@@ -11,8 +12,9 @@ const Div = styled.div`
 `
 
 type Book = {
-    name: String,
+    title: String,
     author: String,
+    description: String,
 }
 
 type Props = {
@@ -22,7 +24,7 @@ type Props = {
 const BooksRow = (props: Props) => {
   return (
     <Div>
-        {props.books.map(book => <BookBox name={book.name} author={book.author} />)}
+        {props.books.map((book, idx) => <BookBox key={idx} title={book.title} author={book.author} description={book.description} />)}
     </Div>
   )
 }
