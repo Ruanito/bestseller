@@ -9,4 +9,8 @@ export const Title = styled.span`
     line-height: normal;
     display: block;
     text-align: center;
+
+    @media screen and (max-width: 767px) {
+        font-size: 80px;
+    }
 `

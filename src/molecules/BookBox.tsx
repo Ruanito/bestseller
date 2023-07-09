@@ -15,6 +15,11 @@ const Div = styled.div`
     border-radius: 10px;
 
     margin-right: 29px;
+
+    @media screen and (max-width: 767px) {
+        margin: 0 36px 30px 0;
+        width: auto;
+    }
 `
 
 const BookBox = (props: Props) => {

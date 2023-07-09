@@ -9,6 +9,11 @@ const Div = styled.div`
 
     margin-top: 52px;
     padding-bottom: 52px;
+
+    @media screen and (max-width: 767px) {
+      width: 90vw;
+      margin: 10px auto;
+    } 
 `
 
 const Books = () => {
